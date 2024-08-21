@@ -29,7 +29,7 @@ const db = getFirestore(app);
 //fungsi untuk menampilkan data
 export async function ambilDaftarlaporan() {
   const refDokumen = collection(db, "PT-kaf");
-  const kueri = query(refDokumen, orderBy("tanggal"));
+  const kueri = query(refDokumen, orderBy("jumlah"));
   const cuplikanKueri = await getDocs(kueri);
 
   let hasil = [];
